@@ -1,0 +1,199 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a2a6c, #003cff, #0077ff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Cabeçalho */
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-header .logo-img {
+    width: 60px; 
+    height: auto;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.login-header h2 {
+    color: #333;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.login-header h2 span {
+    color: #008cff;
+    font-weight: bold;
+}
+
+.login-header p {
+    color: #666;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* Campos de Input */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.input-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-box input:focus {
+    border-color: #1a2a6c;
+    box-shadow: 0 0 5px rgba(26, 42, 108, 0.2);
+}
+
+/* Botão Mostrar Senha */
+.password-container i {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    color: #666;
+}
+
+/* Checkbox e Links */
+.options {
+    margin-bottom: 25px;
+}
+
+.stay-connected {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Botões */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a2a6c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 16px;
+}
+
+.login-btn:hover {
+    background-color: #0f1a4a;
+}
+
+.forgot-password {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    color: #666;
+    margin-top: 15px;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.forgot-password:hover {
+    color: #b21f1f;
+}
+
+/* Notificações (Popups) */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateX(400px);
+    transition: all 0.3s ease;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+/* Cores das Notificações */
+.notification-success {
+    border-left: 4px solid #4CAF50;
+    color: #2E7D32;
+}
+.notification-success i { color: #4CAF50; }
+
+.notification-warning {
+    border-left: 4px solid #FF9800;
+    color: #E65100;
+}
+.notification-warning i { color: #FF9800; }
+
+.notification-error {
+    border-left: 4px solid #F44336;
+    color: #C62828;
+}
+.notification-error i { color: #F44336; }
+
+.notification-info {
+    border-left: 4px solid #2196F3;
+    color: #1565C0;
+}
+.notification-info i { color: #2196F3; }

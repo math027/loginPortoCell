@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - PortoCell</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="img/logo/icon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container" style="text-align: center;">
+        <div class="login-header">
+            <img src="img/logo/logo.png" alt="Logo PortoCell" class="logo-img">
+            <h2>Bem-vindo, <span id="user-name">Usuário</span>!</h2>
+            <p>Você está logado no sistema.</p>
+        </div>
+        
+        <div style="margin-top: 30px;">
+            <button onclick="logout()" class="login-btn" style="background-color: #d9534f;">Sair</button>
+        </div>
+    </div>
+
+    <script>
+        // Lógica de proteção da rota
+        const token = localStorage.getItem('token');
+        const user = localStorage.getItem('user');
+
+        if (!token) {
+            window.location.href = 'index.html';
+        } else {
+            document.getElementById('user-name').innerText = user;
+        }
+
+        function logout() {
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

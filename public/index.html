@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortoCell Finance - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="img/logo/icon.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <div class="login-header">
+            <img src="img/logo/logo.png" alt="Logo PortoCell" class="logo-img">
+            <h2 id="form-title">PortoCell <span>Finance</span></h2>
+            <p id="form-desc">Digite seus dados para acessar</p>
+        </div>
+
+        <form id="auth-form">
+            <div class="form-group" id="name-group" style="display: none;">
+                <label>Nome Completo</label>
+                <div class="input-box">
+                    <input type="text" id="nome" placeholder="Seu nome">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>E-mail</label>
+                <div class="input-box">
+                    <input type="email" id="email" placeholder="exemplo@email.com" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Senha</label>
+                <div class="input-box password-container">
+                    <input type="password" id="password" placeholder="Digite sua senha" required>
+                    <i class="fa-regular fa-eye" id="togglePassword"></i>
+                </div>
+            </div>
+
+            <button type="submit" class="login-btn" id="main-btn">Entrar</button>
+        </form>
+
+        <div class="options">
+            <p style="text-align: center; margin-top: 15px;">
+                <span id="switch-text">Não tem uma conta?</span> 
+                <a href="#" id="toggle-form" style="color: #1a2a6c; font-weight: bold;">Cadastre-se</a>
+            </p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
