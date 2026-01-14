@@ -27,9 +27,3 @@ Sistema de Login e Cadastro com Node.js, Express e MySQL.
    npm start
 
 6. **Abra o localhost:3000 no seu navegador.**
-
-### Resumo do que vai acontecer:
-* Seu código vai para o GitHub.
-* Suas senhas (arquivo `.env`) **não** vão (segurança total).
-* A pasta pesada `node_modules` **não** vai.
-* Quem baixar seu código vai ler o `README.md`, rodar `npm install` (que baixa o `node_modules` automaticamente) e configurar o próprio banco de dados.
